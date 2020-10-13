@@ -36,12 +36,14 @@ namespace MYS1_Practica3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            InteligentObject.CreateObject("Source", new FacilityLocation(0, 0, 10));
+            ApiSimio api = new ApiSimio();
+            api.CrearCarnets();
+            /*InteligentObject.CreateObject("Source", new FacilityLocation(0, 0, 10));
             InteligentObject.CreateObject("Source", new FacilityLocation(0, 0, 15));
 
             modelo.Facility.IntelligentObjects["Source1"].Properties["InterarrivalTime"].Value = "Random.Exponential(5)";
 
-            SimioProjectFactory.SaveProject(APIProject, rutafinal, out warnings);
+            SimioProjectFactory.SaveProject(APIProject, rutafinal, out warnings);*/
         }
     }
 }

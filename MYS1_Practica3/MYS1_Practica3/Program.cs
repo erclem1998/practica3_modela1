@@ -4,6 +4,16 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Text;
+
+
+using SimioAPI;
+using SimioAPI.Extensions;
+
+using SimioAPI.Graphics;
+using Simio;
+using Simio.SimioEnums;
+
 namespace MYS1_Practica3
 {
     static class Program
