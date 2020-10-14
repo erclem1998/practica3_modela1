@@ -36,7 +36,7 @@ namespace MYS1_Practica3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ApiSimio api = new ApiSimio();
+            ApiSimio api = new ApiSimio("[MYS1]ModeloBaseCarnets_P18.spfx", "[MYS1]ModeloFinalCarnets_P18.spfx");
             api.CrearCarnets();
             /*InteligentObject.CreateObject("Source", new FacilityLocation(0, 0, 10));
             InteligentObject.CreateObject("Source", new FacilityLocation(0, 0, 15));
@@ -44,6 +44,12 @@ namespace MYS1_Practica3
             modelo.Facility.IntelligentObjects["Source1"].Properties["InterarrivalTime"].Value = "Random.Exponential(5)";
 
             SimioProjectFactory.SaveProject(APIProject, rutafinal, out warnings);*/
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ApiSimio api = new ApiSimio("[MYS1]ModeloBase_P18.spfx", "[MYS1]ModeloFinal_P18.spfx");
+            api.GenerarMapa();
         }
     }
 }
