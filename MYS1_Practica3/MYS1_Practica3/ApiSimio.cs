@@ -123,7 +123,7 @@ namespace MYS1_Practica3
                         contadorP++;
                         createPath(getNodo("P" + (contadorP - 3), 1), getNodo("P" + (contadorP - 1), 0));
                         createPath(getNodo("P" + (contadorP - 2), 1), getNodo("P" + (contadorP - 1), 0));
-                        x = x + 13;
+                        x = x + 16;
                         break;
                     case '1':
                         this.crearTransferNode(x, y);
@@ -133,7 +133,7 @@ namespace MYS1_Practica3
                         updateName("TransferNode3", "P" + contadorP);
                         contadorP++;
                         createPath(getNodo("P" + (contadorP - 2), 1), getNodo("P" + (contadorP - 1), 0));
-                        x = x + 3;
+                        x = x + 6;
                         break;
                     case '2':
                         this.crearTransferNode(x, y);
@@ -159,7 +159,7 @@ namespace MYS1_Practica3
                         updateName("TransferNode3", "P" + contadorP);
                         contadorP++;
                         createPath(getNodo("P" + (contadorP - 2), 1), getNodo("P" + (contadorP - 1), 0));
-                        x = x + 13;
+                        x = x + 16;
                         break;
                     case '3':
                         this.crearTransferNode(x, y);
@@ -185,7 +185,7 @@ namespace MYS1_Practica3
                         contadorP++;
                         createPath(getNodo("P" + (contadorP - 2), 1), getNodo("P" + (contadorP - 1), 0));
                         createPath(getNodo("P" + (contadorP - 4), 1), getNodo("P" + (contadorP - 1), 0));
-                        x = x + 13;
+                        x = x + 16;
                         break;
                     case '6':
                         this.crearTransferNode(x, y);
@@ -212,7 +212,7 @@ namespace MYS1_Practica3
                         createPath(getNodo("P" + (contadorP - 2), 1), getNodo("P" + (contadorP - 1), 0));
                         createPath(getNodo("P" + (contadorP - 4), 1), getNodo("P" + (contadorP - 1), 0));
                         createPath(getNodo("P" + (contadorP - 4), 1), getNodo("P" + (contadorP - 3), 0));
-                        x = x + 13;
+                        x = x + 16;
                         break;
                     case '7':
                         this.crearTransferNode(x, y);
@@ -234,7 +234,7 @@ namespace MYS1_Practica3
                         updateName("TransferNode3", "P" + contadorP);
                         contadorP++;
                         createPath(getNodo("P" + (contadorP - 3), 1), getNodo("P" + (contadorP - 1), 0));
-                        x = x + 13;
+                        x = x + 16;
                         break;
                     case '9':
                         this.crearTransferNode(x, y);
@@ -261,7 +261,7 @@ namespace MYS1_Practica3
                         contadorP++;
                         createPath(getNodo("P" + (contadorP - 2), 1), getNodo("P" + (contadorP - 1), 0));
                         createPath(getNodo("P" + (contadorP - 4), 1), getNodo("P" + (contadorP - 1), 0));
-                        x = x + 13;
+                        x = x + 16;
                         break;
                     default:
                         break;
