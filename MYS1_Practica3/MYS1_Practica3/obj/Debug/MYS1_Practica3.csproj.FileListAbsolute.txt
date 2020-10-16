@@ -28,3 +28,13 @@ D:\Modelacion y Simulacion 1\practica3_modela1\MYS1_Practica3\MYS1_Practica3\obj
 D:\Modelacion y Simulacion 1\practica3_modela1\MYS1_Practica3\MYS1_Practica3\obj\Debug\MYS1_Practica3.csproj.CopyComplete
 D:\Modelacion y Simulacion 1\practica3_modela1\MYS1_Practica3\MYS1_Practica3\obj\Debug\MYS1_Practica3.exe
 D:\Modelacion y Simulacion 1\practica3_modela1\MYS1_Practica3\MYS1_Practica3\obj\Debug\MYS1_Practica3.pdb
+C:\Users\Toshiba\Documents\Git\practica3_modela1\MYS1_Practica3\MYS1_Practica3\bin\Debug\MYS1_Practica3.exe.config
+C:\Users\Toshiba\Documents\Git\practica3_modela1\MYS1_Practica3\MYS1_Practica3\bin\Debug\MYS1_Practica3.exe
+C:\Users\Toshiba\Documents\Git\practica3_modela1\MYS1_Practica3\MYS1_Practica3\bin\Debug\MYS1_Practica3.pdb
+C:\Users\Toshiba\Documents\Git\practica3_modela1\MYS1_Practica3\MYS1_Practica3\obj\Debug\MYS1_Practica3.csprojResolveAssemblyReference.cache
+C:\Users\Toshiba\Documents\Git\practica3_modela1\MYS1_Practica3\MYS1_Practica3\obj\Debug\MYS1_Practica3.Form1.resources
+C:\Users\Toshiba\Documents\Git\practica3_modela1\MYS1_Practica3\MYS1_Practica3\obj\Debug\MYS1_Practica3.Properties.Resources.resources
+C:\Users\Toshiba\Documents\Git\practica3_modela1\MYS1_Practica3\MYS1_Practica3\obj\Debug\MYS1_Practica3.csproj.GenerateResource.Cache
+C:\Users\Toshiba\Documents\Git\practica3_modela1\MYS1_Practica3\MYS1_Practica3\obj\Debug\MYS1_Practica3.csproj.CoreCompileInputs.cache
+C:\Users\Toshiba\Documents\Git\practica3_modela1\MYS1_Practica3\MYS1_Practica3\obj\Debug\MYS1_Practica3.exe
+C:\Users\Toshiba\Documents\Git\practica3_modela1\MYS1_Practica3\MYS1_Practica3\obj\Debug\MYS1_Practica3.pdb

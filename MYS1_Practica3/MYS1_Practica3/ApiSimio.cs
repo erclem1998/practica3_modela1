@@ -23,6 +23,9 @@ namespace MYS1_Practica3
         private IIntelligentObjects intelligentObjects;
         int contadorP = 1;
         LinkedList<int> listaPs = new LinkedList<int>();
+        int[,] MapaVertices = { {35,-90},{-28,-90},{-28,-72},{-45,-72},{-25,-58},{-20,-48},{-13,-43},{-20,-35},{-63,-35},{-75,-7},{-65,-2},{-73,3},{-68,15},{-77,25},{-60,33},{-35,35},{-20,35},{-5,32},{20,40},{35,25},{35,18},{45,10},{43,3},{67,-15},{72,-28},{57,-35},{60,-30},{55,-25},{46,-27},{35,-27}  };
+        int[] MapaLinks = { 221643, 63327, 59808 , 85878 , 39685, 30256, 37398, 151280, 107162 , 39333 , 33176, 45736, 47318, 48, 63, 38, 39, 66, 153, 50, 51, 29, 120, 56 , 63, 22, 27, 36, 40, 226 };
+        int contadorV = 1;
 
         public ApiSimio(String rbase,String rfinal)
         {
@@ -76,6 +79,11 @@ namespace MYS1_Practica3
         public void createConveyor(INodeObject nodo1, INodeObject nodo2)
         {
             this.createLink("Conveyor", nodo1, nodo2);
+        }
+
+        public void createConnector(INodeObject nodo1, INodeObject nodo2)
+        {
+            this.createLink("Connector", nodo1, nodo2);
         }
 
         public void updateProperty(String name, String property, String value)
@@ -273,6 +281,7 @@ namespace MYS1_Practica3
 
         public void GenerarMapa()
         {
+            
             GenerarRegiones();
             Generar_Puntos_Cardinales();
             Generar_Aeropuertos();
@@ -282,7 +291,45 @@ namespace MYS1_Practica3
             Generar_Turistas_Nacionales();
             Generar_Salida_Hacia_Aeropuertos();
             Generar_Quedarse_En_Misma_Region();
+            GenerarContornosGuatemala();
             SimioProjectFactory.SaveProject(proyectoApi, rutafinal, out warnings);
+        }
+
+        public void GenerarContornosGuatemala()
+        {
+            this.createSource(-13, -78);
+            updateProperty("Source2", "EntityType", "Avion1");
+            updateProperty("Source2", "InterarrivalTime", "Random.Exponential(15)");
+            updateProperty("Source2", "MaximumArrivals", "15");
+            updateProperty("Source2", "EntitiesPerArrival", "1");
+            updateName("Source2", "Base_Militar");
+            
+
+            this.crearTransferNode(MapaVertices[0,0], MapaVertices[0,1]);
+            updateName("TransferNode2", "V" + contadorV);
+            contadorV++;
+            int NomConveyors = 1;
+            for (int i=1;i<30;i++)
+            {
+                   
+                this.crearTransferNode(MapaVertices[i,0], MapaVertices[i,1]);
+                updateName("TransferNode2", "V" + contadorV);
+                contadorV++;
+                    
+                createConveyor(getNodo("V" + (contadorV - 2), 1), getNodo("V" + (contadorV - 1), 0));
+                updateName("Conveyor2", "ConNav" + NomConveyors);
+                updateProperty("ConNav"+ NomConveyors, "DrawnToScale", "False");
+                updateProperty("ConNav" + NomConveyors, "LogicalLength", MapaLinks[NomConveyors-1].ToString());
+                model.Facility.IntelligentObjects["ConNav" + NomConveyors].Properties["InitialDesiredSpeed"].Value = "16.67";
+                NomConveyors++;
+            }
+            createConveyor(getNodo("V" + (contadorV - 1), 1), getNodo("V1", 0));
+            updateName("Conveyor2", "ConNav" + NomConveyors);
+            updateProperty("ConNav" + NomConveyors, "DrawnToScale", "False");
+            updateProperty("ConNav" + NomConveyors, "LogicalLength", MapaLinks[NomConveyors - 1].ToString());
+            model.Facility.IntelligentObjects["ConNav" + NomConveyors].Properties["InitialDesiredSpeed"].Value = "16.67";
+
+            createConnector(getNodo("Output@Base_Militar", 1), getNodo("V3", 0));
         }
 
         public void GenerarRegiones()
